@@ -1,0 +1,14 @@
+index.html :
+
+inside of pass settings, the uppercase checkbox had upperCase instead of all lowercase.
+
+
+script.js :
+
+inside of the updatePassIndicator, a .value was missing on the lengthSlider:
+
+lengthSlider.value <= 8
+			? "weak"
+			: lengthSlider."" <= 16
+			? "medium"
+			: "strong";

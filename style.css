@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Courier New", Courier, monospace;
+	font-family: "Poppins", sans-serif, arial;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	background: greenyellow;
+	background: #ffbdfd;
 }
 
 .container {
@@ -61,7 +61,7 @@ body {
 }
 
 .input-box span:hover {
-	color: green !important;
+	color: #ffbdfd !important;
 }
 
 .wrapper .pass-indicator {
@@ -83,16 +83,16 @@ body {
 
 .pass-indicator#weak::before {
 	width: 20%;
-	background: red;
+	background: #c70039;
 }
 .pass-indicator#medium::before {
 	width: 50%;
-	background: yellow;
+	background: #ffc300;
 }
 
 .pass-indicator#strong::before {
 	width: 100%;
-	background: green;
+	background: #1adb3d;
 }
 
 .wrapper .pass-length {
@@ -107,6 +107,39 @@ body {
 .pass-length input {
 	width: 100%;
 	height: 5px;
+}
+
+/* Target the input range element */
+input[type="range"] {
+	/* Remove default styles */
+	appearance: none;
+	-webkit-appearance: none;
+	/* Set the dimensions and positioning of the slider */
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	/* Apply color to the track */
+	background: #ccc;
+}
+
+/* Style the slider's thumb (handle) */
+input[type="range"]::-webkit-slider-thumb {
+	/* Set dimensions and shape of the thumb */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	/* Apply color to the thumb */
+	background: #ffbdfd;
+	cursor: pointer;
+}
+
+/* For Mozilla Firefox */
+input[type="range"]::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ffbdfd;
+	cursor: pointer;
 }
 
 .pass-requirements .options {
@@ -148,7 +181,8 @@ body {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	background: green;
+	background: #ffbdfd;
+	font-weight: bold;
 	font-size: 1.06rem;
 	padding: 0.94rem 0;
 	border-radius: 5px;

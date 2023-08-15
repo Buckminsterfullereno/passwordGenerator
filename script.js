@@ -46,7 +46,11 @@ const generatePassword = function () {
 
 const updatePassIndicator = () => {
 	passIndicator.id =
-		lengthSlider.value <= 8 ? "weak" : lengthSlider <= 16 ? "medium" : "strong";
+		lengthSlider.value <= 8
+			? "weak"
+			: lengthSlider.value <= 16
+			? "medium"
+			: "strong";
 };
 
 const updateSlider = () => {
